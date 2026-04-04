@@ -3,533 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ann Jessica Tan | Portfolio</title>
+    <title>Ann Jessica Tan - Portfolio</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-            background-color: #ffffff;
-            color: #1a1a1a;
-            line-height: 1.5;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            border-bottom: 1px solid #eaeaea;
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-        }
-
-        .header-container {
-            max-width: 1100px;
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 1.25rem 2rem;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 50px;
         }
-
         .logo {
-            font-weight: 600;
-            font-size: 1rem;
-            letter-spacing: -0.3px;
+            font-weight: bold;
+            font-size: 18px;
         }
-
-        nav {
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
+        .nav-links a {
+            margin-left: 30px;
             text-decoration: none;
-            color: #1a1a1a;
-            font-size: 0.9rem;
-            font-weight: 500;
+            color: #333;
         }
-
-        nav a:hover {
-            color: #666;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Hero */
-        .hero {
-            padding: 8rem 0 5rem 0;
-        }
-
-        .hero-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #666;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
         h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
+            font-size: 48px;
+            margin-bottom: 20px;
         }
-
-        .hero-description {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 2rem;
-            max-width: 550px;
+        .hero {
+            margin-bottom: 60px;
         }
-
-        .btn-primary {
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            max-width: 600px;
+        }
+        .btn {
             display: inline-block;
-            background: #1a1a1a;
+            background: #333;
             color: white;
+            padding: 10px 25px;
             text-decoration: none;
-            padding: 0.7rem 1.5rem;
-            border-radius: 6px;
-            font-weight: 500;
-            margin-right: 1.5rem;
+            border-radius: 5px;
+            margin-right: 15px;
         }
-
-        .btn-text {
-            color: #1a1a1a;
-            text-decoration: none;
-            font-weight: 500;
+        .btn-outline {
+            background: none;
+            color: #333;
+            border: 1px solid #333;
         }
-
-        /* Section headers */
-        .section-header {
-            margin: 4rem 0 3rem 0;
-        }
-
-        .section-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #666;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
         h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
+            font-size: 32px;
+            margin: 40px 0 20px 0;
         }
-
         h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Work grid */
-        .work-category {
-            margin-bottom: 4rem;
-        }
-
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .work-item {
-            padding: 1.5rem;
-            border: 1px solid #eaeaea;
-            border-radius: 12px;
-            background: white;
-        }
-
-        .work-item:hover {
-            border-color: #ccc;
-        }
-
-        .work-number {
-            font-size: 0.8rem;
-            color: #999;
-            margin-bottom: 1rem;
-            font-family: monospace;
-        }
-
-        .work-item h4 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-
-        .work-item p {
+            font-size: 24px;
+            margin: 30px 0 15px 0;
             color: #555;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            line-height: 1.5;
         }
-
-        .work-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
         }
-
-        .work-tech span {
-            font-size: 0.7rem;
-            color: #666;
-            background: #f5f5f5;
-            padding: 0.2rem 0.7rem;
-            border-radius: 12px;
+        .project-card {
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 8px;
         }
-
-        .work-link {
-            color: #1a1a1a;
+        .project-card h4 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        .tech-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin: 5px 5px 0 0;
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #0066cc;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
         }
-
-        .work-status {
-            color: #999;
-            font-size: 0.85rem;
-            font-style: italic;
-        }
-
-        .work-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        /* Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin: 2rem 0 3rem 0;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
         }
-
-        .skills-grid h3 {
-            font-size: 0.8rem;
-            margin-bottom: 1rem;
-        }
-
         .skills-grid ul {
             list-style: none;
+            padding: 0;
         }
-
         .skills-grid li {
+            margin: 10px 0;
             color: #555;
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
         }
-
-        /* About */
-        .about {
-            padding: 4rem 0;
-            border-top: 1px solid #eaeaea;
-            border-bottom: 1px solid #eaeaea;
-            margin: 2rem 0;
-        }
-
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 50px;
+            margin: 40px 0;
         }
-
-        .about-text {
-            color: #555;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .about-highlight {
-            padding-top: 1rem;
-            font-size: 0.85rem;
-            color: #666;
-            border-top: 1px solid #eaeaea;
-        }
-
-        /* Footer */
         footer {
-            padding: 3rem 0;
             text-align: center;
-        }
-
-        .footer-name {
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
-
-        .footer-title {
-            font-size: 0.8rem;
+            padding: 40px 0;
+            border-top: 1px solid #eee;
+            margin-top: 50px;
             color: #666;
-            margin-bottom: 1rem;
         }
-
         .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
+            margin: 20px 0;
         }
-
         .footer-links a {
-            color: #1a1a1a;
+            margin: 0 15px;
             text-decoration: none;
-            font-size: 0.85rem;
+            color: #333;
         }
-
-        .footer-copyright {
-            font-size: 0.75rem;
-            color: #999;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.5rem;
-            }
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .work-grid {
-                grid-template-columns: 1fr;
-            }
-            .header-container {
-                padding: 1rem 1.5rem;
-            }
-            .container {
-                padding: 0 1.5rem;
-            }
-            nav {
-                gap: 1rem;
-            }
+            h1 { font-size: 32px; }
+            .about-grid { grid-template-columns: 1fr; gap: 20px; }
+            nav { flex-direction: column; gap: 15px; }
+            .nav-links a { margin: 0 15px; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">annjessicatan</div>
-            <nav>
-                <a href="#work">Work</a>
-                <a href="#skills">Skills</a>
-                <a href="mailto:ajessicavtan@gmail.com">Contact</a>
-            </nav>
+
+    <nav>
+        <div class="logo">annjessicatan</div>
+        <div class="nav-links">
+            <a href="#work">Work</a>
+            <a href="#skills">Skills</a>
+            <a href="mailto:ajessicavtan@gmail.com">Contact</a>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <div class="container">
-            <!-- Hero -->
-            <section class="hero">
-                <span class="hero-label">Computer Science Graduate</span>
-                <h1>Building technology with<br>a human-centered approach.</h1>
-                <p class="hero-description">
-                    From healthcare to software development — I combine analytical precision 
-                    with empathy to create meaningful digital solutions.
-                </p>
-                <a href="#work" class="btn-primary">View projects →</a>
-                <a href="https://github.com/annjessicatan" target="_blank" class="btn-text">GitHub →</a>
-            </section>
-
-            <!-- Work Section -->
-            <section id="work">
-                <div class="section-header">
-                    <span class="section-label">Projects</span>
-                    <h2>Selected work across<br>software, IT, and data.</h2>
-                </div>
-
-                <div class="work-category">
-                    <h3>Information Technology</h3>
-                    <div class="work-grid">
-                        <div class="work-item">
-                            <div class="work-number">01</div>
-                            <h4>Active Directory Implementation</h4>
-                            <p>Complete enterprise identity management with OU structure, Group Policy Objects, and delegated administration.</p>
-                            <div class="work-tech">
-                                <span>Active Directory</span>
-                                <span>PowerShell</span>
-                                <span>Windows Server</span>
-                            </div>
-                            <a href="https://github.com/annjessicatan/TryHackMe-Active-Directory-Basics" class="work-link">Case study →</a>
-                        </div>
-
-                        <div class="work-item">
-                            <div class="work-number">02</div>
-                            <h4>Active Directory Homelab</h4>
-                            <p>Comprehensive laboratory environment for learning enterprise security, identity management, and group policy administration.</p>
-                            <div class="work-tech">
-                                <span>Active Directory</span>
-                                <span>VirtualBox</span>
-                                <span>Security</span>
-                            </div>
-                            <a href="https://github.com/annjessicatan/Active-Directory-Homelab" class="work-link">Case study →</a>
-                        </div>
-
-                        <div class="work-item">
-                            <div class="work-number">03</div>
-                            <h4>ITSM Ticketing System</h4>
-                            <p>Building a comprehensive IT service management platform for tracking issues and requests. (In development)</p>
-                            <div class="work-tech">
-                                <span>ITIL</span>
-                                <span>Full-Stack</span>
-                                <span>Database</span>
-                            </div>
-                            <span class="work-status">Coming soon</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work-category">
-                    <h3>Software Development</h3>
-                    <div class="work-grid">
-                        <div class="work-item">
-                            <div class="work-number">04</div>
-                            <h4>Animal Shelter Management</h4>
-                            <p>Full-stack application with 20x faster queries and 85% cache hit ratio. Real-time monitoring dashboard.</p>
-                            <div class="work-tech">
-                                <span>Python</span>
-                                <span>Flask</span>
-                                <span>MongoDB</span>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="work-links">
-                                <a href="https://github.com/annjessicatan/capstone" class="work-link">GitHub →</a>
-                                <a href="https://annjessicatan.github.io/capstone/" class="work-link">Live demo →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work-category">
-                    <h3>Data Analysis</h3>
-                    <div class="work-grid">
-                        <div class="work-item">
-                            <div class="work-number">05</div>
-                            <h4>SQL Analytics Portfolio</h4>
-                            <p>Collection of SQL projects demonstrating advanced querying, database design, and analytical skills.</p>
-                            <div class="work-tech">
-                                <span>SQL</span>
-                                <span>MySQL</span>
-                                <span>Data Analysis</span>
-                            </div>
-                            <a href="https://github.com/annjessicatan/SQL" class="work-link">View portfolio →</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Skills -->
-            <section id="skills">
-                <div class="section-header">
-                    <span class="section-label">Expertise</span>
-                    <h2>Technologies & tools<br>I work with.</h2>
-                </div>
-                <div class="skills-grid">
-                    <div>
-                        <h3>Languages</h3>
-                        <ul>
-                            <li>Python (Flask, PyMongo)</li>
-                            <li>JavaScript (ES6+)</li>
-                            <li>HTML5 & CSS3</li>
-                            <li>SQL</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Infrastructure</h3>
-                        <ul>
-                            <li>Active Directory</li>
-                            <li>Windows Server</li>
-                            <li>PowerShell</li>
-                            <li>Group Policy</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Databases</h3>
-                        <ul>
-                            <li>MongoDB</li>
-                            <li>MySQL</li>
-                            <li>Query Optimization</li>
-                            <li>Database Design</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Tools</h3>
-                        <ul>
-                            <li>Git & GitHub</li>
-                            <li>VS Code / WSL</li>
-                            <li>Jupyter Notebooks</li>
-                            <li>Agile Methodology</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- About -->
-            <section class="about">
-                <div class="about-grid">
-                    <div>
-                        <span class="section-label">Background</span>
-                        <h2>From physical therapy<br>to software engineering.</h2>
-                    </div>
-                    <div>
-                        <p class="about-text">
-                            I'm a Computer Science graduate from Southern New Hampshire University with a unique 
-                            background in Physical Therapy. This journey from healthcare to technology has equipped 
-                            me with exceptional problem-solving skills, attention to detail, and a deep understanding 
-                            of user needs.
-                        </p>
-                        <p class="about-text">
-                            I believe great software is built at the intersection of technical excellence and human 
-                            empathy. My healthcare background taught me to listen carefully, diagnose systematically, 
-                            and create solutions that truly serve people.
-                        </p>
-                        <div class="about-highlight">
-                            🎓 B.S. Computer Science · Southern New Hampshire University · Expected May 2026
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <div class="hero">
+        <p style="color: #666; font-size: 14px; text-transform: uppercase;">Computer Science Graduate</p>
+        <h1>Building technology with<br>a human-centered approach.</h1>
+        <p>From healthcare to software development — I combine analytical precision with empathy to create meaningful digital solutions.</p>
+        <div style="margin-top: 30px;">
+            <a href="#work" class="btn">View projects →</a>
+            <a href="https://github.com/annjessicatan" class="btn btn-outline">GitHub →</a>
         </div>
-    </main>
+    </div>
+
+    <h2 id="work">Projects</h2>
+    <p style="color: #666; margin-bottom: 30px;">Selected work across software, IT, and data.</p>
+
+    <h3>💻 Information Technology</h3>
+    <div class="project-grid">
+        <div class="project-card">
+            <h4>Active Directory Implementation</h4>
+            <p>Enterprise identity management with OU structure, Group Policy Objects, and delegated administration.</p>
+            <div>
+                <span class="tech-tag">Active Directory</span>
+                <span class="tech-tag">PowerShell</span>
+                <span class="tech-tag">Windows Server</span>
+            </div>
+            <a href="https://github.com/annjessicatan/TryHackMe-Active-Directory-Basics" class="project-link">View project →</a>
+        </div>
+
+        <div class="project-card">
+            <h4>Active Directory Homelab</h4>
+            <p>Laboratory environment for learning enterprise security, identity management, and group policy.</p>
+            <div>
+                <span class="tech-tag">Active Directory</span>
+                <span class="tech-tag">VirtualBox</span>
+                <span class="tech-tag">Security</span>
+            </div>
+            <a href="https://github.com/annjessicatan/Active-Directory-Homelab" class="project-link">View project →</a>
+        </div>
+
+        <div class="project-card">
+            <h4>ITSM Ticketing System</h4>
+            <p>IT service management platform for tracking issues and requests. (In development)</p>
+            <div>
+                <span class="tech-tag">ITIL</span>
+                <span class="tech-tag">Full-Stack</span>
+                <span class="tech-tag">Database</span>
+            </div>
+            <span style="color: #999; font-size: 14px;">Coming soon</span>
+        </div>
+    </div>
+
+    <h3>🎓 Software Development</h3>
+    <div class="project-grid">
+        <div class="project-card">
+            <h4>Animal Shelter Management System</h4>
+            <p>Full-stack application with 20x faster queries and 85% cache hit ratio. Real-time monitoring dashboard.</p>
+            <div>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">JavaScript</span>
+            </div>
+            <a href="https://github.com/annjessicatan/capstone" class="project-link">GitHub →</a>
+            <a href="https://annjessicatan.github.io/capstone/" class="project-link" style="margin-left: 15px;">Live demo →</a>
+        </div>
+    </div>
+
+    <h3>📊 Data Analysis</h3>
+    <div class="project-grid">
+        <div class="project-card">
+            <h4>SQL Analytics Portfolio</h4>
+            <p>SQL projects demonstrating advanced querying, database design, and analytical skills.</p>
+            <div>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Data Analysis</span>
+            </div>
+            <a href="https://github.com/annjessicatan/SQL" class="project-link">View portfolio →</a>
+        </div>
+    </div>
+
+    <h2 id="skills">Technical Skills</h2>
+    <div class="skills-grid">
+        <div>
+            <h4>Languages</h4>
+            <ul>
+                <li>Python (Flask, PyMongo)</li>
+                <li>JavaScript (ES6+)</li>
+                <li>HTML5 & CSS3</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Infrastructure</h4>
+            <ul>
+                <li>Active Directory</li>
+                <li>Windows Server</li>
+                <li>PowerShell</li>
+                <li>Group Policy</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Databases</h4>
+            <ul>
+                <li>MongoDB</li>
+                <li>MySQL</li>
+                <li>Database Design</li>
+                <li>Query Optimization</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Tools</h4>
+            <ul>
+                <li>Git & GitHub</li>
+                <li>VS Code / WSL</li>
+                <li>Jupyter Notebooks</li>
+                <li>Agile Methodology</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin: 50px 0; padding: 40px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+        <div>
+            <p style="color: #666; font-size: 14px; text-transform: uppercase;">Background</p>
+            <h2 style="margin: 10px 0;">From physical therapy<br>to software engineering.</h2>
+        </div>
+        <div>
+            <p>I'm a Computer Science graduate from Southern New Hampshire University with a unique background in Physical Therapy. This journey from healthcare to technology has equipped me with exceptional problem-solving skills, attention to detail, and a deep understanding of user needs.</p>
+            <p style="margin-top: 20px;">I believe great software is built at the intersection of technical excellence and human empathy. My healthcare background taught me to listen carefully, diagnose systematically, and create solutions that truly serve people.</p>
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee;">
+                🎓 B.S. Computer Science · Southern New Hampshire University · Expected May 2026
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <div class="container">
-            <div class="footer-name">Ann Jessica Tan</div>
-            <div class="footer-title">Computer Science Graduate</div>
-            <div class="footer-links">
-                <a href="https://github.com/annjessicatan">GitHub</a>
-                <a href="https://www.linkedin.com/in/annjessicatan">LinkedIn</a>
-                <a href="mailto:ajessicavtan@gmail.com">Email</a>
-            </div>
-            <div class="footer-copyright">© 2026 · Built with purpose</div>
+        <div style="font-weight: bold;">Ann Jessica Tan</div>
+        <div style="color: #666; margin: 10px 0;">Computer Science Graduate</div>
+        <div class="footer-links">
+            <a href="https://github.com/annjessicatan">GitHub</a>
+            <a href="https://www.linkedin.com/in/annjessicatan">LinkedIn</a>
+            <a href="mailto:ajessicavtan@gmail.com">Email</a>
         </div>
+        <div>© 2026 · Built with purpose</div>
     </footer>
+
 </body>
 </html>
