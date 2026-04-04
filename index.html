@@ -3,240 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ann Jessica Tan | Software Engineer Portfolio</title>
+    <title>Ann Jessica Tan | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">AJT</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header>
+        <div class="header-container">
+            <div class="logo">annjessicatan</div>
+            <nav>
+                <a href="#work">Work</a>
+                <a href="#skills">Skills</a>
+                <a href="mailto:ajessicavtan@gmail.com">Contact</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-greeting">Hi, I'm</p>
-                <h1>Ann Jessica Tan</h1>
-                <p class="hero-title">Computer Science Graduate | Full-Stack Developer</p>
-                <p class="hero-description">From healthcare to technology — I bring analytical precision and human-centered design to software development. Passionate about building meaningful solutions that make a difference.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn-primary">View My Work</a>
-                    <a href="#contact" class="btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm an upcoming Computer Science graduate from Southern New Hampshire University with a unique background in Physical Therapy. This journey from healthcare to technology has equipped me with exceptional problem-solving skills, attention to detail, and a deep understanding of user needs.</p>
-                    <p>I believe that great software is built at the intersection of technical excellence and human empathy. My healthcare background taught me to listen carefully, diagnose systematically, and create solutions that truly serve people.</p>
-                    <div class="education-badge">
-                        <strong>🎓 B.S. Computer Science</strong> - Southern New Hampshire University (Expected May 2026)
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <div class="stat-number">3+</div>
-                        <div class="stat-label">Technical Domains</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Client Satisfaction</div>
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-label">Computer Science Graduate</span>
+                    <h1>Building technology with<br>a human-centered approach.</h1>
+                    <p class="hero-description">
+                        From healthcare to software development — I combine analytical precision 
+                        with empathy to create meaningful digital solutions.
+                    </p>
+                    <div class="hero-links">
+                        <a href="#work" class="btn-primary">View projects →</a>
+                        <a href="https://github.com/annjessicatan" target="_blank" class="btn-text">GitHub →</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <p class="section-subtitle">A showcase of my work across software development, IT infrastructure, and data analytics</p>
-            
-            <!-- IT Projects -->
-            <div class="project-category">
-                <h3>🔐 Information Technology</h3>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-icon">🏛️</div>
-                        <h4>Active Directory Basics</h4>
-                        <p>Complete implementation of enterprise identity management including OU structure, Group Policy Objects, and delegation of control. Simulated Junior Domain Administrator responsibilities.</p>
-                        <div class="tech-stack">
-                            <span>Active Directory</span>
-                            <span>PowerShell</span>
-                            <span>Windows Server</span>
-                            <span>GPMC</span>
-                        </div>
-                        <a href="https://github.com/annjessicatan/TryHackMe-Active-Directory-Basics" target="_blank" class="project-link">View Project →</a>
-                    </div>
+        <!-- Work Section -->
+        <section id="work" class="work">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Projects</span>
+                    <h2>Selected work across<br>software, IT, and data.</h2>
+                </div>
 
-                    <div class="project-card">
-                        <div class="project-icon">💻</div>
-                        <h4>Active Directory Homelab</h4>
-                        <p>Comprehensive laboratory environment for learning enterprise security, identity management, and group policy administration in a safe, controlled setting.</p>
-                        <div class="tech-stack">
-                            <span>Active Directory</span>
-                            <span>VirtualBox</span>
-                            <span>Security</span>
-                            <span>Windows Server</span>
+                <!-- IT Projects -->
+                <div class="work-category">
+                    <h3>Information Technology</h3>
+                    <div class="work-grid">
+                        <div class="work-item">
+                            <div class="work-number">01</div>
+                            <h4>Active Directory Implementation</h4>
+                            <p>Complete enterprise identity management with OU structure, Group Policy Objects, and delegated administration. Simulated real-world IT infrastructure.</p>
+                            <div class="work-tech">
+                                <span>Active Directory</span>
+                                <span>PowerShell</span>
+                                <span>Windows Server</span>
+                            </div>
+                            <a href="https://github.com/annjessicatan/TryHackMe-Active-Directory-Basics" class="work-link">Case study →</a>
                         </div>
-                        <a href="https://github.com/annjessicatan/Active-Directory-Homelab" target="_blank" class="project-link">View Project →</a>
-                    </div>
 
-                    <div class="project-card">
-                        <div class="project-icon">🎫</div>
-                        <h4>Ticketing System</h4>
-                        <p>Building a comprehensive IT service management platform for tracking issues, requests, and change management workflows. (In Development)</p>
-                        <div class="tech-stack">
-                            <span>ITIL</span>
-                            <span>Full-Stack</span>
-                            <span>Database</span>
+                        <div class="work-item">
+                            <div class="work-number">02</div>
+                            <h4>Active Directory Homelab</h4>
+                            <p>Comprehensive laboratory environment for learning enterprise security, identity management, and group policy administration in a controlled setting.</p>
+                            <div class="work-tech">
+                                <span>Active Directory</span>
+                                <span>VirtualBox</span>
+                                <span>Security</span>
+                            </div>
+                            <a href="https://github.com/annjessicatan/Active-Directory-Homelab" class="work-link">Case study →</a>
                         </div>
-                        <span class="coming-soon">Coming Soon</span>
+
+                        <div class="work-item">
+                            <div class="work-number">03</div>
+                            <h4>ITSM Ticketing System</h4>
+                            <p>Building a comprehensive IT service management platform for tracking issues, requests, and change management workflows. (In development)</p>
+                            <div class="work-tech">
+                                <span>ITIL</span>
+                                <span>Full-Stack</span>
+                                <span>Database</span>
+                            </div>
+                            <span class="work-status">Coming soon</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Computer Science Projects -->
-            <div class="project-category">
-                <h3>🐾 Computer Science</h3>
-                <div class="projects-grid">
-                    <div class="project-card featured">
-                        <div class="project-badge">Capstone</div>
-                        <div class="project-icon">🐕</div>
-                        <h4>Animal Shelter Management System</h4>
-                        <p>Full-stack application with 20x faster queries and 85% cache hit ratio. Features real-time monitoring, professional dashboard, and comprehensive testing.</p>
-                        <div class="tech-stack">
-                            <span>Python</span>
-                            <span>Flask</span>
-                            <span>MongoDB</span>
-                            <span>JavaScript</span>
-                            <span>Chart.js</span>
+                <!-- Development Projects -->
+                <div class="work-category">
+                    <h3>Software Development</h3>
+                    <div class="work-grid">
+                        <div class="work-item featured">
+                            <div class="work-number">04</div>
+                            <h4>Animal Shelter Management</h4>
+                            <p>Full-stack application with 20x faster queries and 85% cache hit ratio. Real-time monitoring dashboard with comprehensive testing coverage.</p>
+                            <div class="work-tech">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>MongoDB</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="work-links">
+                                <a href="https://github.com/annjessicatan/capstone" class="work-link">GitHub →</a>
+                                <a href="https://annjessicatan.github.io/capstone/" class="work-link">Live demo →</a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/annjessicatan/capstone" target="_blank" class="project-link">GitHub →</a>
-                            <a href="https://annjessicatan.github.io/capstone/" target="_blank" class="project-link">Live Demo →</a>
+                    </div>
+                </div>
+
+                <!-- Data Projects -->
+                <div class="work-category">
+                    <h3>Data Analysis</h3>
+                    <div class="work-grid">
+                        <div class="work-item">
+                            <div class="work-number">05</div>
+                            <h4>SQL Analytics Portfolio</h4>
+                            <p>Collection of SQL projects demonstrating advanced querying, database design, and analytical skills using real-world datasets.</p>
+                            <div class="work-tech">
+                                <span>SQL</span>
+                                <span>MySQL</span>
+                                <span>Data Analysis</span>
+                            </div>
+                            <a href="https://github.com/annjessicatan/SQL" class="work-link">View portfolio →</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Data Analysis Projects -->
-            <div class="project-category">
-                <h3>📊 Data Analysis</h3>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-icon">🗄️</div>
-                        <h4>SQL Portfolio</h4>
-                        <p>Collection of SQL projects demonstrating advanced querying, database design, and analytical skills using real-world datasets and complex joins.</p>
-                        <div class="tech-stack">
-                            <span>SQL</span>
-                            <span>MySQL</span>
-                            <span>Data Analysis</span>
-                            <span>Database Design</span>
+        <!-- Skills -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-label">Expertise</span>
+                    <h2>Technologies & tools<br>I work with.</h2>
+                </div>
+                <div class="skills-grid">
+                    <div>
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>Python (Flask, PyMongo)</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>HTML5 & CSS3</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Infrastructure</h3>
+                        <ul>
+                            <li>Active Directory</li>
+                            <li>Windows Server</li>
+                            <li>PowerShell</li>
+                            <li>Group Policy</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Databases</h3>
+                        <ul>
+                            <li>MongoDB</li>
+                            <li>MySQL</li>
+                            <li>Query Optimization</li>
+                            <li>Database Design</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Tools</h3>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>VS Code / WSL</li>
+                            <li>Jupyter Notebooks</li>
+                            <li>Agile Methodology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div>
+                        <span class="section-label">Background</span>
+                        <h2>From physical therapy<br>to software engineering.</h2>
+                    </div>
+                    <div>
+                        <p class="about-text">
+                            I'm a Computer Science graduate from Southern New Hampshire University with a unique 
+                            background in Physical Therapy. This journey from healthcare to technology has equipped 
+                            me with exceptional problem-solving skills, attention to detail, and a deep understanding 
+                            of user needs.
+                        </p>
+                        <p class="about-text">
+                            I believe great software is built at the intersection of technical excellence and human 
+                            empathy. My healthcare background taught me to listen carefully, diagnose systematically, 
+                            and create solutions that truly serve people.
+                        </p>
+                        <div class="about-highlight">
+                            🎓 B.S. Computer Science · Southern New Hampshire University · Expected May 2026
                         </div>
-                        <a href="https://github.com/annjessicatan/SQL" target="_blank" class="project-link">View Project →</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <p class="section-subtitle">Tools and technologies I work with</p>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Python (Flask, PyMongo)</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>HTML5 & CSS3</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
-                    <ul>
-                        <li>Git & GitHub</li>
-                        <li>VS Code / WSL</li>
-                        <li>MongoDB / MySQL</li>
-                        <li>Jupyter Notebooks</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>IT & Infrastructure</h3>
-                    <ul>
-                        <li>Active Directory</li>
-                        <li>Windows Server</li>
-                        <li>PowerShell</li>
-                        <li>Group Policy Management</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Core Competencies</h3>
-                    <ul>
-                        <li>Full-Stack Development</li>
-                        <li>Database Management</li>
-                        <li>Agile Methodologies</li>
-                        <li>Test-Driven Development</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Let's Connect</h2>
-            <p class="section-subtitle">I'm always open to discussing opportunities and collaborations</p>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <a href="mailto:ajessicavtan@gmail.com">ajessicavtan@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">💼</span>
-                        <a href="https://www.linkedin.com/in/annjessicatan" target="_blank">LinkedIn Profile</a>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🐙</span>
-                        <a href="https://github.com/annjessicatan" target="_blank">GitHub Profile</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Ann Jessica Tan. Built with passion from healthcare to tech.</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-name">Ann Jessica Tan</div>
+                    <div class="footer-title">Computer Science Graduate</div>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/annjessicatan">GitHub</a>
+                    <a href="https://www.linkedin.com/in/annjessicatan">LinkedIn</a>
+                    <a href="mailto:ajessicavtan@gmail.com">Email</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2026 · Built with purpose
+                </div>
+            </div>
         </div>
     </footer>
 </body>
